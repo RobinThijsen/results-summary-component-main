@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>l</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div></div>
+		<script>
+			let div = document.querySelector("div")
+			
+			div.addEventListener('click', () => {
+				if (div.classList.contains("onclick")) {
+					div.classList.remove("onclick")
+				} else {
+					div.classList.add("onclick")
+				}
+			})
+		</script>
+	</body>
+</html>

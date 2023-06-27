@@ -1,0 +1,30 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+div {
+	width: 20px;
+	height: 5px;
+	background: red;
+	posiiton: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+div::after {
+	content: "";
+	width: 5px;
+	height: 20px;
+	position: absolute;
+	background: red;
+	transition: all .3s ease;
+}
+
+div.onclick::after {
+	height: 0;
+}

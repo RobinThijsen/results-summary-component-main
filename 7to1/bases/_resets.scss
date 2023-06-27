@@ -1,0 +1,49 @@
+// reset margin and padding for all element
+// pseudo element too
+*, *::before, **::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// reset default format of input button and textarea
+input, button, textarea {
+	border: none;
+	background: none;
+	outline: none;
+	border-radius: 0;
+	// this parts is like a opacity 0 or a
+	// visibility hidden on it
+	/*
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	*/
+}
+
+// disable underline on a element
+a {
+	text-decoration: none;
+}
+
+// disable style type of list
+// not on ol because its a specific list
+// with number so that make no sense
+ul {
+	list-style-type: none;
+}
+
+// disable default italic
+em, i {
+	font-style: normal;
+}
+
+// body element
+// all width of window
+// min height of window height
+// disable overflow on x abscissa
+body {
+	width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+}

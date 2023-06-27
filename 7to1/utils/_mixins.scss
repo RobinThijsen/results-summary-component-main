@@ -1,0 +1,18 @@
+// mixin of flex center
+@mixin flexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// mixin of flex center and row
+@mixin flexRowCenter {
+	@include flexCenter();
+	flex-direction: row;
+}
+
+// mixin of flex center and column
+@mixin flexColumnCenter {
+	@include flexCenter();
+	flex-direction: column;
+}

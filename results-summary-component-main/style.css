@@ -1,0 +1,216 @@
+/* import font from google */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* variable color */
+:root {
+	/* PRIMARY COLOR */
+	--blue: hsl(234, 85%, 45%);
+	--green: hsl(166, 100%, 37%);
+	--yellow: hsl(39, 100%, 56%);
+	--light-red: hsl(0, 100%, 67%);
+	
+	/* GRADIENT COLOR */
+	--gradient-1-1-blue: hsl(252, 100%, 67%);
+	--gradient-1-2-blue: hsl(241, 81%, 54%);
+	
+	--gradient-2-1-blue: hsla(256, 72%, 46%, 1);
+	--gradient-2-2-blue: hsla(241, 72%, 46%, 0);
+	
+	/* NEUTRAL COLOR */
+	--white: #ffffff;
+	--pale-blue: hsl(221, 100%, 96%);
+	--light-lavender: hsl(241, 100%, 89%);
+	--dark-gray-blue: hsl(224, 30%, 27%);
+}
+/* properties for every element */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Hanken Grotesk', sans-serif;
+}
+/* change style of values of summary's pourcentages */
+em {
+	font-style: normal;
+	color: var(--dark-gray-blue);
+}
+/* disable underline on a element */
+a {
+	text-decoration: none;
+}
+/* change size of paragraphe */
+p {
+	font-size: 18px;
+}
+body {
+	background: var(--white);
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+main {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section {
+	width: 770px;
+	height: 500px;
+	box-shadow: 25px 25px 3em hsla(241, 100%, 89%, 0.4);
+	border-radius: 20px;
+	display: flex;
+}
+div.containers {
+	width: 50%;
+	border-radius: 20px;
+	background: linear-gradient(to top, var(--gradient-1-2-blue), var(--gradient-1-1-blue));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	padding: 4em;
+	padding-top: 2em;
+	color: var(--white);
+}
+div.containers h2, div.containers-child h1 {
+	font-weight: 500;
+}
+div.containers h2 {
+	color: var(--light-lavender);
+}
+div.containers div.score {
+	width: 200px;
+	aspect-ratio: 1/1;
+	background: linear-gradient(to bottom, var(--gradient-1-2-blue), var(--gradient-2-2-blue));
+	border-radius: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+div.containers div.score p:first-child {
+	font-size: 4em;
+	font-weight: 700;
+}
+div.containers div.score p:last-child {
+	color: hsla(241, 100%, 89%, 0.4);
+}
+div.containers div.containers-child {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+div.containers div.containers-child p {
+	color: var(--light-lavender);
+}
+div.containers2 {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 2em;
+	padding: 2.5em;
+	padding-top: 2em;
+}
+div.containers2 h2 {
+	color: var(--dark-gray-blue);
+}
+/*
+Reaction, Memory, Verbal and Visual style
+*/
+div.containers2 div.pourcentages {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	font-weight: 700;
+}
+div.containers2 div.pourcentages>div {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.8em;
+	font-weight: 500;
+	border-radius: 5px;
+}
+div.containers2 div.pourcentages p {
+	color: hsla(224, 30%, 27%, 0.6);
+}
+div.containers2 div.pourcentages>div div {
+	display: flex;
+	gap: 0.7em;
+}
+/**/
+
+
+/* 
+SPECIFY COLOR FOR EACH TYPE (REACTION, MEMORY, VERBAL, VISUAL) 
+- background
+- color
+
+*/
+div.containers2 div.pourcentages>div:nth-child(1) {
+	background: hsla(0, 100%, 67%, 0.1);
+}
+div.containers2 div.pourcentages>div:nth-child(1) div p {
+	color: var(--light-red);
+}
+div.containers2 div.pourcentages>div:nth-child(2) {
+	background: hsla(39, 100%, 56%, 0.1);
+}
+div.containers2 div.pourcentages>div:nth-child(2) div p {
+	color: var(--yellow);
+}
+div.containers2 div.pourcentages>div:nth-child(3) {
+	background: hsla(166, 100%, 37%, 0.1);
+}
+div.containers2 div.pourcentages>div:nth-child(3) div p {
+	color: var(--green);
+}
+div.containers2 div.pourcentages>div:nth-child(4) {
+	background: hsla(234, 85%, 45%, 0.1);
+}
+div.containers2 div.pourcentages>div:nth-child(4) div p {
+	color: var(--blue);
+}
+/**/
+
+/* BUTTON */
+div.containers2 a {
+	width: 100%;
+	padding: 1em 0;
+	background: var(--dark-gray-blue);
+	color: var(--white);
+	text-align: center;
+	border-radius: 50px;
+}
+div.containers2 a:hover, div.containers2 a:active {
+	background: linear-gradient(to top, var(--gradient-1-2-blue), var(--gradient-1-1-blue));
+}
+/**/
+
+@media screen and (max-width:800px) {
+	section {
+		width: 100%;
+		height: 0;
+		min-height: 100vh;
+		flex-direction: column;
+	}
+	div.containers, div.containers2 {
+		width: 100%;
+		min-height: 50vh;
+	}
+	div.containers {
+		border-radius: 0 0 20px 20px;
+	}
+	div.containers2 {
+		align-items: center;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,37 @@
+*, *::before, **::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input, button, textarea {
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 0;
+  /*
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+em, i {
+  font-style: normal;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
